@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-day-8-educator-task/static/css/main.1e8800bc.css",
+    "main.js": "/react-day-8-educator-task/static/js/main.dcdec59e.js",
+    "static/js/787.9a32ed5a.chunk.js": "/react-day-8-educator-task/static/js/787.9a32ed5a.chunk.js",
+    "index.html": "/react-day-8-educator-task/index.html",
+    "main.1e8800bc.css.map": "/react-day-8-educator-task/static/css/main.1e8800bc.css.map",
+    "main.dcdec59e.js.map": "/react-day-8-educator-task/static/js/main.dcdec59e.js.map",
+    "787.9a32ed5a.chunk.js.map": "/react-day-8-educator-task/static/js/787.9a32ed5a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e8800bc.css",
+    "static/js/main.dcdec59e.js"
+  ]
+}
