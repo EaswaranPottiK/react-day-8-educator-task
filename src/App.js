@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { ProgressBar } from 'react-bootstrap';
+import Bar from './Bar';
 
-function App() {
+function App(){
+  
+  const [completion,setCompletion] = useState(0)
+
+  useEffect(() => {
+    setInterval(() => { // how to clear interval here?
+      if (completion<=100){      
+        setCompletion((value)=>value+1);
+      }
+    }, 200);
+  }, []);
+
+  function findPercent(){
+    if (parseInt(completion)<100){
+      return completion
+    }
+    else {
+      return 100
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:'flex', flexDirection:'column'}}>
+      <p style={{textAlign:'center'}}>Progress Bar</p>
+      <Bar completion={findPercent()}/>
+      <p style={{textAlign:'center'}}>{parseInt(completion)>=100 ? "Complete!":"Loading..."}</p>
     </div>
   );
 }
